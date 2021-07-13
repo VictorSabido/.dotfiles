@@ -22,3 +22,4 @@ gpo() { git pull origin $* }
 unalias gpu >/dev/null 2>&1
 gpu() { git push $* }
 
+alias sail='bash vendor/bin/sail'
