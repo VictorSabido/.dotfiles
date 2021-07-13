@@ -3,6 +3,13 @@ sudo apt-get update -y
 sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+sudo apt -y install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt -y install php7.4
+
+
+
 
 ln -fs .dotfiles/.bash_aliases $HOME/.bash_aliases
 ln -fs .dotfiles/.zshrc $HOME/.zshrc
