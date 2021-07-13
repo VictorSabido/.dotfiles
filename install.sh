@@ -3,11 +3,18 @@ sudo apt-get update -y
 sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# PHP
 sudo apt -y install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 sudo apt -y install php7.4
 
+# COMPOSER
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+php -r "readfile('https://getcomposer.org/installer');" | php
+
+# composer --version
 
 
 
