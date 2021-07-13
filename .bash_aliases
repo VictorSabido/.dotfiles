@@ -14,13 +14,11 @@ workspace() { docker exec -it workspace-visu bash -c "su sail" }
 
 # unset -f gc 
 unalias gc >/dev/null 2>&1
-gc() { git checkout $*  }
+gc() { git checkout $* }
 
 unalias gpo >/dev/null 2>&1
-gpo() { git pull origin $*  }
+gpo() { git pull origin $* }
 
 unalias gpu >/dev/null 2>&1
-gpu() { git push $*  }
-
-
+gpu() { git push $* }
 

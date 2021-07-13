@@ -123,3 +123,5 @@ export DEFAULT_USER="xxx"
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+source ~/powerlevel10k/powerlevel10k.zsh-theme
