@@ -1,8 +1,5 @@
 sudo apt-get update -y
 
-sudo apt-get install zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # PHP
 sudo apt -y install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
@@ -17,15 +14,11 @@ sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 php -r "readfile('https://getcomposer.org/installer');" | php
-
 # composer --version
 
+sudo apt-get install zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-
-ln -fs .dotfiles/.bash_aliases $HOME/.bash_aliases
-ln -fs .dotfiles/.zshrc $HOME/.zshrc
-ln -fs .dotfiles/.p10k.zsh $HOME/.p10k.zsh
-ln -fs .dotfiles/.gitconfig $HOME/.gitconfig
-
-
-source ${HOME}/.bash_aliases 
+# OhMyZsh Theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
