@@ -4,7 +4,7 @@ git clone https://github.com/VictorSabido/dotfiles
 
 cd dotfiles
 
-sudo sh install.sh
+bash install.sh
 
 
 #### Set zsh by default
