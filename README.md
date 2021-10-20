@@ -1,3 +1,5 @@
+**How to?**
+
 cd ${HOME}
 
 git clone https://github.com/VictorSabido/dotfiles
