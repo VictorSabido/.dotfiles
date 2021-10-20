@@ -6,11 +6,14 @@ alias ea='vi ~/.bash_aliases; source ~/.bash_aliases && source $HOME/.bash_alias
 alias calias='cat $HOME/.bash_aliases' 
 
 alias prj='cd /$HOME/projects'
+alias sit='cd /$HOME/projects/dc_deploy/sites'
 alias sail='bash vendor/bin/sail'
 
-# alias build-storage=mkdir storage\framework\views storage\framework\sessions storage\framework\cache
+# alias build-storage=mkdir storage/framework/views storage/framework/sessions storage/framework/cache
 
 workspace() { docker exec -it workspace-visu bash -c "su sail" }
+soferta() { docker exec -it workspace-sol-oferta bash -c "su sail" }
+pa() { php artisan $* }
 
 # unset -f gc 
 unalias gc >/dev/null 2>&1
@@ -23,3 +26,5 @@ unalias gpu >/dev/null 2>&1
 gpu() { git push $* }
 
 alias sail='bash vendor/bin/sail'
+
+dc(){ docker-compose $*; }
