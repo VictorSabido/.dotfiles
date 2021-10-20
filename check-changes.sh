@@ -5,9 +5,11 @@ NO_FORMAT="\033[0m"
 GREEN="\e[32m"
 C_DODGERBLUE1="\033[38;5;33m"
 
-git fetch
-HEADHASH=$(git rev-parse HEAD)
-UPSTREAMHASH=$(git rev-parse master@{upstream})
+export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
+
+git --work-tree=/home/victor/.dotfiles fetch
+HEADHASH=$(git --work-tree=/home/victor/.dotfiles rev-parse HEAD)
+UPSTREAMHASH=$(git --work-tree=/home/victor/.dotfiles rev-parse master@{upstream})
 
 ColorGreen(){
     echo $GREEN$1$NO_FORMAT
@@ -15,7 +17,7 @@ ColorGreen(){
 
 gitpull(){
     echo "Aplicando cambios de remoto ..."
-    git pull origin
+    git --work-tree=/home/victor/.dotfiles pull origin
     echo "$(ColorGreen 'Cambios aplicados!')"
 }
 
