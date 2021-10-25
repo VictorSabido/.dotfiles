@@ -28,3 +28,5 @@ gpu() { git push $* }
 alias sail='bash vendor/bin/sail'
 
 dc(){ docker-compose $*; }
+
+alias gpue='git commit --allow-empty -m "🚀 Forced hook"'
