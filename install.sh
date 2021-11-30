@@ -2,16 +2,6 @@
 
 # bash install.sh
 
-##
-# BASH menu script that checks:
-#   - Memory usage
-#   - CPU load
-#   - Number of TCP connections
-#   - Kernel version
-##
-
-server_name=$(hostname)
-
 function php_7_and_extensions () {
     echo ""
     echo "Instalando PHP 7.4... "
