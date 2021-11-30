@@ -2,7 +2,7 @@
 
 cd ${HOME}
 
-git clone https://github.com/VictorSabido/dotfiles
+git clone https://github.com/VictorSabido/.dotfiles
 
 cd dotfiles
 
